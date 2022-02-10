@@ -1,6 +1,7 @@
 # IoT for 2022 TAIWAN INTERNATIONAL LIGHT FESTIVAL
 
-This project is based on [Dummy_Device_IoTtalk_v2_py](https://github.com/IoTtalk/Dummy_Device_IoTtalk_v2_py).
+This project is only for the 2022 TAIWAN INTERNATIONAL LIGHT FESTIVAL.  
+It is based on [Dummy_Device_IoTtalk_v2_py](https://github.com/IoTtalk/Dummy_Device_IoTtalk_v2_py).
 
 ## [Python Virtual Environment](https://docs.python.org/3/tutorial/venv.html) (recommend)
 
