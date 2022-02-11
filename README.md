@@ -32,3 +32,11 @@ Please set the variable ```api_url``` in ```sa.py```.
 ```bash
 python -m iottalkpy.dai sa.py
 ```
+
+## Point Cloud
+
+* 92160 points
+  * each point is XYZ coordinates
+    * three int16 values, totaling 6 bytes
+* data stream format
+  * "XYZXYZXYZ...XYZXYZXYZ"
