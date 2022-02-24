@@ -3,6 +3,9 @@
 This project is only for the 2022 TAIWAN INTERNATIONAL LIGHT FESTIVAL.  
 It is based on [Dummy_Device_IoTtalk_v2_py](https://github.com/IoTtalk/Dummy_Device_IoTtalk_v2_py).
 
+## Requirements
+* python 3.6+
+
 ## [Python Virtual Environment](https://docs.python.org/3/tutorial/venv.html) (recommend)
 
 ```bash
@@ -30,13 +33,14 @@ Please set the variable ```api_url``` in ```sa.py```.
 ## Start
 
 ```bash
-python -m iottalkpy.dai sa.py
+python3 -m iottalkpy.dai sa.py
 ```
 
-## Point Cloud
+## Data
+This example will generate random robot data and read `Send.bin` file and send.  
+And will receive robot data and `Send.bin` binary data, and then save to `ReceiveRobotData.txt` and `Receive.bin`.
 
-* 92160 points
-  * each point is XYZ coordinates
-    * three int16 values, totaling 6 bytes
-* data stream format
-  * "XYZXYZXYZ...XYZXYZXYZ"
+* Robot
+  * data format: `[float, float]`
+* `Send.bin`
+  * data format: `binary`
