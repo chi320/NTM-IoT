@@ -41,6 +41,7 @@ This example will generate random robot data and read `Send.bin` file and send.
 And will receive robot data and `Send.bin` binary data, and then save to `ReceiveRobotData.txt` and `Receive.bin`.
 
 * Robot
-  * data format: `[float, float]`
-* `Send.bin`
+  * data format: `float`
+  * `0-360` degree of rotation 
+* `Send.jpg`
   * data format: `binary`
