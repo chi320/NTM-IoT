@@ -33,7 +33,7 @@ def Picture_I():
     '''Send raw data
     '''
     try:
-        with open('Send.bin', 'rb') as f:
+        with open('Send.jpg', 'rb') as f:
             data = f.read()
             return str(base64.b64encode(data).decode('ascii'))
     except exception as e:
@@ -43,7 +43,7 @@ def Picture_I():
 def Robot_I():
     '''Send Robot data
     '''
-    return str([uniform(0, 360), uniform(0, 200)])
+    return str(uniform(0, 360))
 
 
 
@@ -51,7 +51,7 @@ def Picture_O(data: list):
     '''Receive raw data and save it
     '''
     try:
-        with open('Receive.bin', 'wb') as f:
+        with open('Receive.jpg', 'wb') as f:
             f.write(base64.b64decode(data[0]))
     except exception as e:
         print(e)
@@ -63,6 +63,6 @@ def Robot_O(data: list):
     try:
         with open('ReceiveRobotData.txt', 'w') as f:
             print(data[0])
-            f.write(data[0])
+            f.write(str(data[0]))
     except exception as e:
         print(e)
