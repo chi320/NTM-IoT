@@ -23,7 +23,7 @@ python3 -m venv venv       # create venv
 ## Install dependencies
 
 ```bash
-pip install -r .\requirements.txt
+pip install -r requirements.txt
 ```
 
 ## Config IoTtalk Server URL
