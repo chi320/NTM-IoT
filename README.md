@@ -23,7 +23,7 @@ python3 -m venv venv       # create venv
 ## Install dependencies
 
 ```bash
-pip install iottalk-py
+pip install -r .\requirements.txt
 ```
 
 ## Config IoTtalk Server URL
@@ -37,11 +37,13 @@ python3 -m iottalkpy.dai sa.py
 ```
 
 ## Data
-This example will generate random robot data and read `Send.bin` file and send.  
-And will receive robot data and `Send.bin` binary data, and then save to `ReceiveRobotData.txt` and `Receive.bin`.
+This example will generate random robot data and read `Send.jpg` file and send.  
+And will receive robot data and `Send.jpg` binary data, and then save to `ReceiveRobotData.txt` and `<timestamp>.jpg`.
 
-* Robot
+* Robot data
   * data format: `float`
   * `0-360` degree of rotation 
 * `Send.jpg`
   * data format: `binary`
+* `<timestamp>.jpg`
+  * save path: `receive`
