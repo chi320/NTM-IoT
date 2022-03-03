@@ -1,0 +1,2 @@
+iottalk-py
+opencv-python
