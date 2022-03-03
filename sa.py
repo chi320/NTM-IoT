@@ -29,21 +29,21 @@ def on_register(dan):
     print('register successfully')
 
 
-def Picture_I():
-    '''Send raw data
-    '''
-    try:
-        with open('Send.jpg', 'rb') as f:
-            data = f.read()
-            return str(base64.b64encode(data).decode('ascii'))
-    except exception as e:
-        print(e)
+# def Picture_I():
+#     '''Send raw data
+#     '''
+#     try:
+#         with open('Send.jpg', 'rb') as f:
+#             data = f.read()
+#             return str(base64.b64encode(data).decode('ascii'))
+#     except exception as e:
+#         print(e)
 
 
-def Robot_I():
-    '''Send Robot data
-    '''
-    return str(uniform(0, 360))
+# def Robot_I():
+#     '''Send Robot data
+#     '''
+#     return str(uniform(0, 360))
 
 
 
