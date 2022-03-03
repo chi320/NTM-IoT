@@ -1,4 +1,7 @@
 import base64
+import cv2
+import os
+from datetime import datetime
 from logging import exception
 from random import  uniform
 
@@ -24,8 +27,15 @@ interval = {
     'Robot-I': 1,
 }
 
+dir_path = 'received'
+
 
 def on_register(dan):
+    if os.path.isdir(dir_path):
+        print('Path exists!')
+    else:
+        os.mkdir(dir_path)
+        print('Create floder: {dir_path}')
     print('register successfully')
 
 
@@ -51,8 +61,18 @@ def Picture_O(data: list):
     '''Receive raw data and save it
     '''
     try:
-        with open('Receive.jpg', 'wb') as f:
-            f.write(base64.b64decode(data[0]))
+        file_name = datetime.now().isoformat().replace(':', '_')
+        file = bytes(base64.b64decode(data[0]))
+        file_path = f'{dir_path}/{file_name}.jpg'
+        with open(file_path, 'wb') as f:
+            f.write(file)
+        
+        img = cv2.imread(file_path)
+        new_img = cv2.rotate(img, cv2.ROTATE_180)
+        cv2.imshow('image', new_img)
+        
+        cv2.waitKey(1)        
+        
     except exception as e:
         print(e)
 
