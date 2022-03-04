@@ -68,7 +68,7 @@ def Picture_O(data: list):
             f.write(file)
         
         img = cv2.imread(file_path)
-        new_img = cv2.rotate(img, cv2.ROTATE_180)
+        new_img = cv2.flip(img, 0)
         cv2.imshow('image', new_img)
         
         cv2.waitKey(1)        
